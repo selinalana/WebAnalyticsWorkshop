@@ -1,0 +1,42 @@
+.formContainer {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.formContainer h1 {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.formContainer label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.formContainer input, .formContainer textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Palanquin Dark', sans-serif;
+}
+
+.submitButton:hover {
+    background-color: #45a049;
+}
