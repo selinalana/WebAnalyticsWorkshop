@@ -136,3 +136,26 @@ productButton.addEventListener("click", () => {
 close.addEventListener("click", () => {
   payment.style.display = "none";
 });
+// Login Form Handling
+const loginForm = document.getElementById("loginForm");
+
+loginForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevent the form from submitting the traditional way
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  // Basic validation (you can expand this as needed)
+  if (username === "" || password === "") {
+    alert("Please fill in both fields.");
+    return;
+  }
+
+  // For now, just log the values
+  console.log("Username:", username);
+  console.log("Password:", password);
+
+  // Here you can add your authentication logic
+  // For example, sending a request to your backend server
+  alert("Login successful! (This is a placeholder alert)");
+});
