@@ -17,6 +17,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KPMWDC52');</script>
 <!-- End Google Tag Manager -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHEJYBYTLS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MHEJYBYTLS');
+</script>
 </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KPMWDC52"></script>
     <script>
@@ -348,21 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KPMWDC52"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'GTM-KPMWDC52',{ 'debug_mode': true });
-    </script>
-</head>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-KPMWDC52"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHEJYBYTLS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -372,39 +367,171 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </head>
 <body>
-    <div>Click Add to Cart Button for custom event</div>
+    <div>Click the buttons for custom events</div>
+
+    <!-- Select Item button -->
+    <button id="select-item">Select Item</button>
+
+    <!-- Add to Cart button -->
     <button id="add-to-cart">Add to Cart</button>
+
+    <!-- View Item List button -->
+    <button id="view-item-list">View Item List</button>
+
+      <!-- Begin Checkout button -->
+    <button id="begin-checkout">Begin Checkout</button>
+
+  <!-- Remove from Cart button -->
+    <button id="remove-from-cart">Remove from Cart</button>
+
+
+
     <script>
+    // Event for selecting an item
+    document.getElementById("select-item").addEventListener("click", function () {
+        gtag("event", "select_item", {
+            item_list_id: "related_products",
+            item_list_name: "Related Products",
+            items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }]
+        });
+    });
+
+    // Event for adding an item to the cart
     document.getElementById("add-to-cart").addEventListener("click", function () {
         gtag("event", "add_to_cart", {
-                currency: "USD",
-                value: 30.03,
-                items: [
-                {
-                  item_id: "SKU_12345",
-                  item_name: "Stan and Friends Tee",
-                  affiliation: "Google Merchandise Store",
-                  coupon: "SUMMER_FUN",
-                  discount: 2.22,
-                  index: 0,
-                  item_brand: "Google",
-                  item_category: "Apparel",
-                  item_category2: "Adult",
-                  item_category3: "Shirts",
-                  item_category4: "Crew",
-                  item_category5: "Short sleeve",
-                  item_list_id: "related_products",
-                  item_list_name: "Related Products",
-                  item_variant: "green",
-                  location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-                  price: 10.01,
-                  quantity: 3
-                }]
+            currency: "USD",
+            value: 30.03,
+            items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }]
+        });
+    });
+
+    // Event for viewing an item list
+    document.getElementById("view-item-list").addEventListener("click", function () {
+        gtag("event", "view_item_list", {
+            item_list_id: "related_products",
+            item_list_name: "Related Products",
+            items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }]
+        });
+    });
+
+      // Event for beginning checkout process
+    document.getElementById("begin-checkout").addEventListener("click", function () {
+        gtag("event", "begin_checkout", {
+            currency: "USD",
+            value: 30.03,
+            coupon: "SUMMER_FUN",
+            items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }]
+        });
+    });
+
+        // Event for removing an item from the cart
+    document.getElementById("remove-from-cart").addEventListener("click", function () {
+        gtag("event", "remove_from_cart", {
+            currency: "USD",
+            value: 30.03,
+            items: [
+            {
+              item_id: "SKU_12345",
+              item_name: "Stan and Friends Tee",
+              affiliation: "Google Merchandise Store",
+              coupon: "SUMMER_FUN",
+              discount: 2.22,
+              index: 0,
+              item_brand: "Google",
+              item_category: "Apparel",
+              item_category2: "Adult",
+              item_category3: "Shirts",
+              item_category4: "Crew",
+              item_category5: "Short sleeve",
+              item_list_id: "related_products",
+              item_list_name: "Related Products",
+              item_variant: "green",
+              location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+              price: 10.01,
+              quantity: 3
+            }]
         });
     });
     </script>
 </body>
 </html>
-
-
-
